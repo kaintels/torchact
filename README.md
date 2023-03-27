@@ -1,6 +1,6 @@
 # torchact
 
-<div style="text-align: center">
+<div align="center">
 
 TorchAct, collection of activation function for PyTorch.
 
@@ -10,4 +10,5 @@ TorchAct, collection of activation function for PyTorch.
 [![image](https://badge.fury.io/py/torchact.svg)](https://badge.fury.io/py/torchact)
 ![PyPI - License](https://img.shields.io/pypi/l/torchact?color=blue)
 [![image](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 </div>
