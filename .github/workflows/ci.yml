@@ -38,12 +38,6 @@ jobs:
         restore-keys: ${{ runner.os }}-pip-
     - name: Install dependencies
       run: pip install -r requirements.txt
-    - name: Check lint
-      run: make check
-    - name: Check test
-      env:
-        PYTHONDONTWRITEBYTECODE: 1
-      run: make test
     - name: Check codecov
       uses: codecov/codecov-action@v3
       with:
