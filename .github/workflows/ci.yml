@@ -38,12 +38,7 @@ jobs:
         restore-keys: ${{ runner.os }}-pip-
     - name: Install dependencies
       run: pip install -r requirements.txt
+    - name: Run Test
+      run : python -m pytest -v --cov=./torchact ./tests
     - name: Check codecov
       uses: codecov/codecov-action@v3
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        directory: ./
-        files: ./coverage.xml
-        env_vars: OS,PYTHON
-        fail_ci_if_error: true
-        verbose: true
