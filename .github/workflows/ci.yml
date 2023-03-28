@@ -38,6 +38,8 @@ jobs:
         restore-keys: ${{ runner.os }}-pip-
     - name: Install dependencies
       run: pip install -r requirements.txt
+    - name: Run Test
+      run : python -m pytest -v --cov=./torchact ./tests
     - name: Check codecov
       uses: codecov/codecov-action@v3
       with:
