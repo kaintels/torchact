@@ -14,3 +14,7 @@ def test_tensor_type():
     x = torch.rand(1, 5)
     out_x = test_model(x)
     assert type(out_x) == torch.Tensor
+
+
+def test_has_attr():
+    assert hasattr(Softmax(), "dim")
