@@ -25,6 +25,9 @@ class Softmax(nn.Module):
         super(Softmax, self).__init__()
         self.dim = dim
 
+    def __getstate__(self):
+        return self.__dict__
+    
     def __setstate__(self, state):
         super(Softmax, self).__setstate__()
         if not hasattr(self, "dim"):
