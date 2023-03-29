@@ -23,15 +23,9 @@ class Softmax(nn.Module):
 
     def __init__(self, dim: Optional[int] = None):
         super(Softmax, self).__init__()
-        self.dim = dim
-
-    def __getstate__(self):
-        return self.__dict__
-    
-    def __setstate__(self, state):
-        super(Softmax, self).__setstate__()
         if not hasattr(self, "dim"):
             self.dim = None
+        self.dim = dim
 
     def forward(self, x):
         x = F.softmax(x, dim=self.dim)

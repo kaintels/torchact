@@ -17,5 +17,4 @@ def test_tensor_type():
 
 
 def test_has_attr():
-    assert Softmax().__getstate__()
     assert hasattr(Softmax(), "dim")
