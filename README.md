@@ -42,20 +42,28 @@ Thanks for your contribution!
 
 There are several steps for contributing.
 
-0. Install library using `requirements.txt`
-1. Write your code in torchact folder.
-2. Add your module in `__init__.py` (`__version__` cannot be changed. It will be decided later.)
+0. Fork this repo
+1. Install library using `requirements.txt`
+2. Write your code in torchact folder.
+3. Add your module in `__init__.py` (`__version__` cannot be changed. It will be decided later.)
 
 For example.
-```
+
+```python
 from .your_module import Your_Module
 __all__ = ("ReLU", "SinLU", "Softmax", "Your_Module")
 ```
-3. Add your module in `test_activation_function.py`
+3. If you want to test case, Write test case.
 
 For example.
+
+```python
+def test_has_attr():
+    for activation_name in __all__:
+        if activation_name == "Softmax":
+            assert hasattr(str_to_class(activation_name)(), "dim")
+        else:
+            pass
 ```
-from torchact import Your_Module
-test_model.add_module("Your_Module", Your_Module())
-```
-4. Send a PR. Code testing happens automatically. (PYPI is upgraded by the admin himself.)
+4. Run black style.```black .```
+5. Send a PR. Code testing happens automatically. (PYPI is upgraded by the admin himself.)
