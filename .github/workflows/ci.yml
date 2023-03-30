@@ -39,6 +39,6 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
     - name: Run Test
-      run : python -m pytest -v --cov=./torchact ./tests
+      run : /bin/sh ./test.sh
     - name: Check codecov
       uses: codecov/codecov-action@v3
