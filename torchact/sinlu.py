@@ -12,7 +12,7 @@ class SinLU(nn.Module):
     :param float b: Frequency of the sine. Default: 1.0
 
     Examples::
-        >>> import torchact, torch
+        >>> import torch, torchact
         >>> m = torchact.SinLU()
         >>> input = torch.randn(1, 3)
         >>> output = m(input)

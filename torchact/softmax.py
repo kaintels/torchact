@@ -13,7 +13,7 @@ class Softmax(nn.Module):
     :param int dim: Softmax dimension. Default: None
 
     Examples::
-        >>> import torchact, torch
+        >>> import torch, torchact
         >>> m = torchact.Softmax()
         >>> input = torch.tensor([1.0, -2.0, 0.0, 3.0])
         >>> output = m(input)
