@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.abspath('../'))
 project = 'torchact'
 copyright = '2023, Seungwoo Han'
 author = 'Seungwoo Han'
-release = '0.2.0'
+release = '0.1.1'
 
 
 # -- General configuration ---------------------------------------------------
