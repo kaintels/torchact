@@ -12,7 +12,7 @@ class ReLU(nn.Module):
     :param bool inplace: In-place operation. Default: False
 
     Examples::
-        >>> import torchact, torch
+        >>> import torch, torchact
         >>> m = torchact.ReLU()
         >>> input = torch.tensor([1, -2, 0, 3])
         >>> output = m(input)
