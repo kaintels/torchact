@@ -5,4 +5,4 @@ from .softmax import Softmax
 
 __all__ = ("ReLU", "SinLU", "Softmax")
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
