@@ -1,7 +1,7 @@
 Activation functions
 ================================
 
-.. _relu:
+.. _ReLU:
 
 ReLU
 ---------
@@ -10,7 +10,7 @@ ReLU
    :members:
 
 
-.. _sinlu:
+.. _SinLU:
 
 SinLU
 ---------
@@ -19,7 +19,7 @@ SinLU
    :members:
 
 
-.. _softmax:
+.. _Softmax:
 
 Softmax
 ---------
