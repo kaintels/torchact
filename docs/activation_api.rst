@@ -6,7 +6,7 @@ Activation functions
 ReLU
 ---------
 
-.. automodule:: torchact.ReLU
+.. autoclass:: torchact.ReLU
    :members:
 
 
@@ -15,7 +15,7 @@ ReLU
 SinLU
 ---------
 
-.. automodule:: torchact.SinLU
+.. autoclass:: torchact.SinLU
    :members:
 
 
@@ -24,5 +24,5 @@ SinLU
 Softmax
 ---------
 
-.. automodule:: torchact.Softmax
+.. autoclass:: torchact.Softmax
    :members:
