@@ -4,7 +4,7 @@ import torch.nn as nn
 
 class SinLU(nn.Module):
     r"""
-    Implementation of https://doi.org/10.3390/math10030337
+    Implementation of Sinu-Sigmoidal Linear Unit https://doi.org/10.3390/math10030337
 
     :math:`\text{SinLU}(x) = (x+a\text{sin}bx) \cdot \sigma(x)`
 

@@ -10,13 +10,14 @@ Welcome to torchact's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
-
 
 Contents
 --------
 .. toctree::
    :maxdepth: 2
+   :caption: API Reference
+   :hidden:
+   :glob:
 
    activation_api
 

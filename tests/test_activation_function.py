@@ -24,7 +24,7 @@ def test_tensor_type():
 
 def test_has_attr():
     for activation_name in __all__:
-        if activation_name == "Softmax":
+        if activation_name == "Softmax" or activation_name == "LogSoftmax":
             assert hasattr(str_to_class(activation_name)(), "dim")
         else:
             pass
