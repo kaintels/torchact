@@ -26,6 +26,9 @@ class ABReLU(nn.Module):
         self.inplace = inplace
 
     def forward(self, x):
-        beta = self.alpha * torch.mean(x, -2)
+        if len(x.shape) < 2:
+            beta = self.alpha * torch.mean(x)
+        else:
+            beta = self.alpha * torch.mean(x, -2)
         x_out = x - beta
         return torch.clip(x_out, min=0)
