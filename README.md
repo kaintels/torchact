@@ -77,6 +77,8 @@ To cite this repository:
   title={TorchAct, collection of activation function for PyTorch.},
   author={Seungwoo Han},
   publisher={Engineering Archive},
-  year = {2023}
+  doi={10.31224/2988},
+  url={https://engrxiv.org/preprint/view/2988}
+  year={2023}
 }
 ```
