@@ -67,3 +67,18 @@ def test_has_attr():
 ```
 4. Run black style.```black .```
 5. Send a PR. Code testing happens automatically. (PYPI is upgraded by the admin himself.)
+
+## Citing TorchAct
+
+To cite this repository:
+
+```
+@article{hantorchact,
+  title={TorchAct, collection of activation function for PyTorch.},
+  author={Seungwoo Han},
+  publisher={Engineering Archive},
+  doi={10.31224/2988},
+  url={https://engrxiv.org/preprint/view/2988}
+  year={2023}
+}
+```
