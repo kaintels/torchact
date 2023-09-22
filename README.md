@@ -8,8 +8,8 @@ TorchAct, collection of activation function for PyTorch.
 
 | ![image](https://img.shields.io/badge/-Tests:-black?style=flat-square) [![CI](https://github.com/kaintels/torchact/actions/workflows/ci.yml/badge.svg)](https://github.com/kaintels/torchact/actions/workflows/ci.yml) [![codecov](https://codecov.io/gh/kaintels/torchact/branch/main/graph/badge.svg?token=EJMC8R0OOT)](https://codecov.io/gh/kaintels/torchact) [![Read the Docs](https://img.shields.io/readthedocs/torchact)](https://torchact.readthedocs.io/) |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| ![image](https://img.shields.io/badge/-Stable%20Releases:-black?style=flat-square) ![PyPI - Status](https://img.shields.io/pypi/status/torchact) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/torchact) [![image](https://badge.fury.io/py/torchact.svg)](https://badge.fury.io/py/torchact) [![Downloads](https://static.pepy.tech/badge/torchact)](https://pepy.tech/project/torchact)                                                          
-| ![image](https://img.shields.io/badge/-Features:-black?style=flat-square) ![PyPI - License](https://img.shields.io/pypi/l/torchact?color=blue) [![image](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)                                                                                                                                                                                                                  
+| ![image](https://img.shields.io/badge/-Stable%20Releases:-black?style=flat-square) ![PyPI - Status](https://img.shields.io/pypi/status/torchact) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/torchact) [![image](https://badge.fury.io/py/torchact.svg)](https://badge.fury.io/py/torchact) [![Downloads](https://static.pepy.tech/badge/torchact)](https://pepy.tech/project/torchact)  
+| ![image](https://img.shields.io/badge/-Features:-black?style=flat-square)  ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?&logo=PyTorch&logoColor=white) ![PyPI - License](https://img.shields.io/pypi/l/torchact?color=blue) [![image](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 </div>
 
@@ -53,6 +53,7 @@ For example.
 from .your_module import Your_Module
 __all__ = ("ReLU", "SinLU", "Softmax", "Your_Module")
 ```
+
 3. If you want to test case, Write test case.
 
 For example.
@@ -65,7 +66,8 @@ def test_has_attr():
         else:
             pass
 ```
-4. Run black style.```black .```
+
+4. Run black style.`black .`
 5. Send a PR. Code testing happens automatically. (PYPI is upgraded by the admin himself.)
 
 ## Citing TorchAct
