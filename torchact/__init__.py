@@ -12,4 +12,4 @@ from .log_softmax import LogSoftmax
 
 __all__ = ("ReLU", "SinLU", "Softmax", "LeakyReLU", "LogSoftmax", "ELU", "ABReLU", "Sigmoid", "Step", "LogSigmoid")
 
-__version__ = "0.2.1"
+__version__ = "0.2.3"
