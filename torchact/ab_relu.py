@@ -17,7 +17,7 @@ class ABReLU(nn.Module):
         >>> input = torch.tensor([1.0, -2.0, 0.0, 3.0])
         >>> output = m(input)
         >>> print(output)
-        tensor([0.5000, 0.0000, 0.0000, 2.5000])
+        tensor([0.1667, 0.0000, 0.0000, 0.8333])
     """
 
     def __init__(self, alpha: float = 1.0, inplace: bool = FALSE_CONDITION):
