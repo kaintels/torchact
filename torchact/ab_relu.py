@@ -26,6 +26,8 @@ class ABReLU(nn.Module):
         self.inplace = inplace
 
     def forward(self, x):
-        beta = self.alpha * torch.mean(x)
+        beta = self.alpha * torch.mean(x, 0)
         x_out = x - beta
-        return torch.clip(x_out, min=0)
+        x_out = torch.clip(x_out, min=0)
+        res = x_out / torch.sum(x_out, 0)
+        return res
