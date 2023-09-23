@@ -26,9 +26,15 @@ class ABReLU(nn.Module):
         self.inplace = inplace
 
     def forward(self, x):
-        beta = self.alpha * torch.mean(x, 0)
+        if x.shape[0] > 1:
+            beta = self.alpha * torch.mean(x, 0)
+        else:
+            beta = self.alpha * torch.mean(x)
         x_out = x - beta
         x_out = torch.clip(x_out, min=0)
-        res = x_out / torch.sum(x_out, 0)
+        if x.shape[0] > 1:
+            res = x_out / torch.sum(x_out, 0)
+        else:
+            res = x_out / torch.sum(x_out)
         _value_is_not_nan(res, 3)
         return res

@@ -3,7 +3,7 @@ import torch
 
 
 def _value_is_not_nan(x: torch.Tensor, stacklevel: int) -> bool:
-    if torch.isnan(x).any().item() == True:
+    if torch.isnan(x).any().item():
         warnings.warn(
             "The tensor value have nan. check your code. ",
             stacklevel=stacklevel,
