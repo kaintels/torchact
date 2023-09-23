@@ -19,8 +19,7 @@ Contents
    :hidden:
    :glob:
 
-   activation_api
-
+   torchact
 
 Indices and tables
 ==================

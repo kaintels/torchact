@@ -20,8 +20,14 @@ sys.path.insert(0, os.path.abspath("../"))
 project = "torchact"
 copyright = "2023, Seungwoo Han"
 author = "Seungwoo Han"
-release = "0.1.1"
+release = "1.0.0"
 
+
+# Configuration for intersphinx: refer to the Python standard library and PyTorch
+intersphinx_mapping = {
+    "python": ("https://docs.python.org/3", None),
+    "pytorch": ("https://pytorch.org/docs/stable", None),
+}
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -38,12 +44,15 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinx.ext.intersphinx",
     "myst_parser",
+    "sphinx.ext.autosummary",
 ]
 source_suffix = {
     ".rst": "restructuredtext",
     ".txt": "markdown",
     ".md": "markdown",
 }
+
+autosummary_generate = True  # Turn on sphinx.ext.autosummary
 
 templates_path = ["_templates"]
 exclude_patterns = []
