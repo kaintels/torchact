@@ -1,4 +1,3 @@
-from .__config__ import *
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -11,7 +10,7 @@ class LogSigmoid(nn.Module):
 
     Examples::
         >>> import torch, torchact
-        >>> m = torchact.LogSigmoid()
+        >>> m = torchact.nn.LogSigmoid()
         >>> input = torch.tensor([1.0, -2.0, 0.0, 3.0])
         >>> output = m(input)
         >>> print(output)
