@@ -1,4 +1,3 @@
-from .__config__ import *
 import torch.nn as nn
 import torch.nn.functional as F
 
@@ -14,14 +13,14 @@ class LeakyReLU(nn.Module):
 
     Examples::
         >>> import torch, torchact
-        >>> m = torchact.LeakyReLU()
+        >>> m = torchact.nn.LeakyReLU()
         >>> input = torch.tensor([1.0, -2.0, 0.0, 3.0])
         >>> output = m(input)
         >>> print(output)
         tensor([ 1.0000, -0.0200,  0.0000,  3.0000])
     """
 
-    def __init__(self, neg_slope: float = 1e-2, inplace: bool = FALSE_CONDITION):
+    def __init__(self, neg_slope: float = 1e-2, inplace: bool = False):
         super(LeakyReLU, self).__init__()
         self.neg_slope = neg_slope
         self.inplace = inplace

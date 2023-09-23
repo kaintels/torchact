@@ -1,4 +1,3 @@
-from .__config__ import *
 import torch.nn as nn
 import torch.nn.functional as F
 
@@ -12,14 +11,14 @@ class ELU(nn.Module):
 
     Examples::
         >>> import torch, torchact
-        >>> m = torchact.ELU()
+        >>> m = torchact.nn.ELU()
         >>> input = torch.tensor([1.0, -2.0, 0.0, 3.0])
         >>> output = m(input)
         >>> print(output)
         tensor([ 1.0000, -0.8647,  0.0000,  3.0000])
     """
 
-    def __init__(self, alpha: float = 1.0, inplace: bool = FALSE_CONDITION):
+    def __init__(self, alpha: float = 1.0, inplace: bool = False):
         super(ELU, self).__init__()
         self.alpha = alpha
         self.inplace = inplace

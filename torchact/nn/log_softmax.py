@@ -1,4 +1,3 @@
-from .__config__ import *
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -13,7 +12,7 @@ class LogSoftmax(nn.Module):
 
     Examples::
         >>> import torch, torchact
-        >>> m = torchact.LogSoftmax()
+        >>> m = torchact.nn.LogSoftmax()
         >>> input = torch.tensor([1.0, -2.0, 0.0, 3.0])
         >>> output = m(input)
         >>> print(output)

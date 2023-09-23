@@ -14,7 +14,7 @@ class Softmax(nn.Module):
 
     Examples::
         >>> import torch, torchact
-        >>> m = torchact.Softmax()
+        >>> m = torchact.nn.Softmax()
         >>> input = torch.tensor([1.0, -2.0, 0.0, 3.0])
         >>> output = m(input)
         >>> print(output)

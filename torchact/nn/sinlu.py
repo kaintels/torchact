@@ -13,7 +13,7 @@ class SinLU(nn.Module):
 
     Examples::
         >>> import torch, torchact
-        >>> m = torchact.SinLU()
+        >>> m = torchact.nn.SinLU()
         >>> input = torch.randn(1, 3)
         >>> output = m(input)
         >>> print(output)
