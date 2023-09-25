@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.abspath("../"))
 project = "torchact"
 copyright = "2023, Seungwoo Han"
 author = "Seungwoo Han"
-release = "1.1.1"
+release = "1.1.2"
 
 
 # Configuration for intersphinx: refer to the Python standard library and PyTorch
