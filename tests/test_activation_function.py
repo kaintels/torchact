@@ -5,9 +5,9 @@ from torchact.functional import *
 from torchact.functional import __all__ as F_all
 from torchact.nn import *
 from torchact.nn import __all__ as C_all
-from torchact.utils import _value_is_not_nan
 import pytest
 import logging
+import warnings
 
 logger = logging.getLogger("test")
 
@@ -31,9 +31,22 @@ def _str_to_class(classname):
     return getattr(sys.modules[__name__], classname)
 
 
+@pytest.mark.skip
+def _value_is_not_nan(x: torch.Tensor, stacklevel: int) -> bool:
+    if torch.isnan(x).any().item():
+        warnings.warn(
+            "The tensor value have nan. check your code. ",
+            stacklevel=stacklevel,
+        )
+        ret = False
+    else:
+        ret = True
+    return ret
+
+
 def test_nan_check():
-    test_number = 1
     for activation_name in F_all:
+        test_number = 1
         test_def = _str_to_def(activation_name)
 
         for test_case in all_test_case:
