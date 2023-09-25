@@ -6,7 +6,13 @@ import torch.nn.functional as F
 class ABReLU(nn.Module):
     r"""
     Implementation of Average-Biased Rectified Linear Unit https://arxiv.org/abs/1804.02051
+    
+    :math:`A_{i}^{n}=\frac{\sum_{\rho_{1}=1}^{D_{1}}{\sum_{\rho_{2}=1}^{D_{2}}\cdots\sum_{\rho_{d}=1}^{D_{d}}{I_{i}^{n}(\rho_{1},\rho_{2},\cdots,\rho_{d})}}}{D_{1}\times D_{2}\times\cdots\times D_{d}}`
+    
+    :math:`\beta=\alpha\times A_{i}^{n}`
 
+    :math:`I_{o}^{n}(\rho)=\begin{cases}I_{i}^{n}(\rho)-\beta,&\text{if }I_{i}^{n}(\rho)-\beta>0\\0,&\text{otherwise}\end{cases}`
+    
     :param float alpha: parameter to be set empirically. Default: 1.0
     :param bool inplace: In-place operation. Default: False
 
